@@ -12,7 +12,8 @@ class DiffieHellman:
         return util.generate_random_prime(2, 3333)
     
     def __generate_public_key(self):
-        return (self.__g**self.__private_key)% self.__p
-    def __generate_shared_key(self, public_key_other):
-        return (public_key_other**self.__private_key)%self.__p
+        return (self.__g**self.__private_key) % self.__p
+    
+    def generate_shared_key(self, public_key_other):
+        return (public_key_other**self.__private_key) % self.__p
         
